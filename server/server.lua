@@ -46,7 +46,7 @@ CreateThread(function()
 			end
 		end, {})
 		k = k
-	end
+	
 	createHooks[k] = exports.ox_inventory:registerHook('createItem', function(payload)
 		local metadata = payload.metadata
 		if metadata?.shopData then
@@ -58,6 +58,7 @@ CreateThread(function()
 			end)
 		end
 	end, {})
+     end
 end)
 
 RegisterServerEvent('wasabi_oxshops:refreshShop', function(shop)
